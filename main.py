@@ -26,6 +26,7 @@ metasys(metasys_data, output_file_path, net=net)
 lutron(lutron_data, output_file_path, net=net)
 
 # Set physics options
+# net.show_buttons(filter_=['physics'])
 net.set_options("""
 var options = {
   "physics": {
