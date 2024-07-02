@@ -25,32 +25,38 @@ webctrl(webctrl_data, output_file_path, net=net)
 metasys(metasys_data, output_file_path, net=net)
 lutron(lutron_data, output_file_path, net=net)
 
-# Show buttons and apply settings/filters
-# net.show_buttons(filter_=['physics'])
-# net.toggle_physics(True)
-# net.force_atlas_2based()
+# Set physics options
 net.set_options("""
-const options = {
+var options = {
   "physics": {
+    "enabled": true,
     "forceAtlas2Based": {
       "theta": 1,
-      "gravitationalConstant": -102,
-      "springLength": 220,
-      "avoidOverlap": 0
+      "gravitationalConstant": -50,
+      "springLength": 100,
+      "avoidOverlap": 0.5
     },
     "minVelocity": 0.75,
-    "solver": "forceAtlas2Based"
+    "solver": "forceAtlas2Based",
+    "stabilization": {
+      "enabled": true,
+      "iterations": 1000,
+      "updateInterval": 25
+    }
   }
 }
 """)
 
-# Apply stabilization and disable physics after initialization
+# JavaScript to stop physics after stabilization
 stabilization_js = """
-    var network = window.network;
-    network.on("stabilizationIterationsDone", function () {
-    network.stopSimulation();
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function() {
+        var network = window.network;
+        network.once('stabilizationIterationsDone', function() {
+            network.stopSimulation();
+        });
     });
-    network.stabilize(100);
+</script>
 """
 
 # Display the network diagram in the HTML file

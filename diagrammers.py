@@ -46,6 +46,7 @@ def webctrl(csv_file_path, output_file_path, net=None):
         
         for _, row in building_controllers.iterrows():
             # Ensure column names match those in your CSV file
+            status = row['Status']
             serial_number = row['Serial Number']
             boot_version = row['Boot Version']
             driver_version = row['Driver Version']
@@ -53,7 +54,7 @@ def webctrl(csv_file_path, output_file_path, net=None):
             location = row['Location']
             
             controller_label = f"{serial_number}"
-            tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> {index}<br><strong>Boot Version:</strong> {boot_version}<br><strong>Driver Version:</strong> {driver_version}<br><strong>Location:</strong> {location}"
+            tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> {index}<br><strong>Status:</strong> {status}<br><strong>Boot Version:</strong> {boot_version}<br><strong>Driver Version:</strong> {driver_version}<br><strong>Location:</strong> {location}"
             
             net.add_node(str(controller_label), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image')
             net.add_edge(str(index), str(controller_label))
@@ -62,11 +63,12 @@ def webctrl(csv_file_path, output_file_path, net=None):
     unknown_controllers = df[df['Building'] == 'Unknown']
 
     for _, row in unknown_controllers.iterrows():
+        status = row['Status']
         vendor_name = row['Vendor Name']
         serial_number = row['Serial Number']
         driver_version = row['Driver Version']
         controller_label = f"{serial_number}"
-        tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> Unknown"
+        tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> Unknown <br><strong>Status:</strong> {status}<br>"
         
         existing_edges = [(edge['from'], edge['to']) for edge in net.get_edges()]
 
