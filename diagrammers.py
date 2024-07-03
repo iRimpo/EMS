@@ -53,13 +53,14 @@ def webctrl(csv_file_path, output_file_path, net=None):
             driver_version = row['Driver Version']
             vendor_name = row['Vendor Name']
             location = row['Location']
+            vendor = row['Vendor Name']
             
             # Create a unique identifier for each controller; so all nodes appear
             controller_id = f"{serial_number}_{idx}"
             controller_label = f"{serial_number}"
-            tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> {index}<br><strong>Status:</strong> {status}<br><strong>Boot Version:</strong> {boot_version}<br><strong>Driver Version:</strong> {driver_version}<br><strong>Location:</strong> {location}"
+            tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong> Vendor:</strong> {vendor_name}<br><strong> Serial Number:</strong> {serial_number}<br><strong>Building:</strong> {index}<br><strong>Status:</strong> {status}<br><strong>Boot Version:</strong> {boot_version}<br><strong>Driver Version:</strong> {driver_version}<br><strong>Location:</strong> {location}"
             
-            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image')
+            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image', title=vendor)
             net.add_edge(str(index), str(controller_id))
     # # Handle 'Unknown' building separately
     # unknown_controllers = df[df['Building'] == 'Unknown']
@@ -137,7 +138,7 @@ def metasys(csv_file_path, output_file_path, net=None):
             controller_id = f"{name}_{idx}"
             tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br><strong>Building:</strong> {index}<br><strong>Description:</strong> {description}"
             
-            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image')
+            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image', title=vendor_name)
             net.add_edge(str(index), str(controller_id))
 
     # Handle 'Unknown' building separately
@@ -222,6 +223,7 @@ def lutron(csv_file_path, output_file_path, net=None):
             controller_id = f"{serial_number}_{idx}"
             controller_label = f"{serial_number}"
             tooltip = f"<img src='images/controller.png' width='100' height='100'><br><strong>Vendor:</strong> {vendor_name}<br>" \
+          f"<strong>Serial Number:</strong> {serial_number}<br>" \
           f"<strong>Model Number:</strong> {model_number}<br>" \
           f"<strong>Area:</strong> {area_name}<br>" \
           f"<strong>Device Name:</strong> {device_name}<br>" \
@@ -232,7 +234,7 @@ def lutron(csv_file_path, output_file_path, net=None):
           f"<strong>Processor:</strong> {processor}<br>" \
           f"<strong>Processor IP:</strong> {processor_ip}"
             
-            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image')
+            net.add_node(str(controller_id), label=str(controller_label), tooltip=tooltip, color='red', image='images/controller.png', shape='image', title=vendor_name)
             net.add_edge(str(index), str(controller_id))
 
     # Handle 'Unknown' building separately
