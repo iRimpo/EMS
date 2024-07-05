@@ -67,11 +67,11 @@ csv_file = 'your_file.csv'
 df = pd.read_csv(csv_file)
 ```
 3. Run whatever csv editor function at the bottom:
-```bash
+```bash python
 webctrl_csv()
 ```
-3. Execute the python file:
-```bash
+3. Execute the Python file:
+```bash python
 python csv_editor
 ```
 
@@ -83,7 +83,7 @@ metasys(your_data2, output_file_path, net=net)
 lutron(your_data3, output_file_path, net=net)
 ```
 2. Run main.py in the terminal:
-```bash
+```bash python
 python main.py
 ```
 The output file Diagram.html will be created in your working directory. Open this file in a web browser to view the EMS network diagram.
