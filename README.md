@@ -57,3 +57,20 @@ Operational,1.0,2.3.4,Room 101/Building 1,Source A,123456,VendorX,No,UserA
 Out of service,1.2,3.1.4,Room 202/Building 2,Source B,654321,VendorY,Yes,UserB
 ```
 
+## Automating CSV Formatting
+
+The project includes a script, csv_editor.py, that automatically formats CSV files from WebCTRL, Metasys, Lutron, Wattstopper, and Encelium to be ready for diagramming.
+
+1. Input your CSV file into the script:
+```bash
+csv_file = 'your_file.csv'
+df = pd.read_csv(csv_file)
+```
+3. Run whatever csv editor function at the bottom:
+```bash
+webctrl_csv()
+```
+3. Execute the python file
+```bash
+python csv_editor
+```
