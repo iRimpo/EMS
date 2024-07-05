@@ -9,7 +9,7 @@ A tool to create visualizations/mappings of the networks on the Energy Managemen
 ## Purpose
 There are more than 800 controllers at Lawrence Berkeley National Laboratory that relay critical data for maintenance. This project automates the tedious job of creating diagrams of the network, providing a creative and efficient way to display all the controllers and their relationships by using CSV file reports from various building automation systems: WebCTRL, Metasys, Lutron, and more.
 
-![alt text](https://i.imgur.com/umL2hqY.png)
+![alt text](https://i.imgur.com/vRGx7X9.png)
 
 ## Prerequisites
 
