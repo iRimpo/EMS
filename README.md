@@ -4,10 +4,10 @@ A tool to create visualizations/mappings of the networks on the Energy Managemen
 
 #### Work in progress until 8/9/2024
 
-### https://irimpo.github.io/EMS-Network-Diagrammer/ - DEMO
+### [DEMO](https://irimpo.github.io/EMS-Network-Diagrammer/)
 
 ## Purpose
-There are more than 800 controllers at Lawrence Berkeley National Laboratory that relay critical data for maintenance. This project automates the tedious job of creating diagrams of the network, providing a creative and efficient way to display all the controllers and their relationships by using CSV file reports from the building automation sytems: WebCTRL, Metasys, Lutron, Quantum, Wattstopper 
+There are more than 800 controllers at Lawrence Berkeley National Laboratory that relay critical data for maintenance. This project automates the tedious job of creating diagrams of the network, providing a creative and efficient way to display all the controllers and their relationships by using CSV file reports from various building automation systems: WebCTRL, Metasys, Lutron, and more.
 
 ![alt text](https://i.imgur.com/umL2hqY.png)
 
@@ -31,11 +31,15 @@ Ensure you have the following installed:
     pip install pyvis pandas
     ```
 
-3. Ensure you have a CSV file of controllers formatted correctly (see below).
+3. Ensure you have CSV files of controllers formatted correctly according to the specific energy management system (see below for details).
 
-## CSV File Format
+## CSV File Formats
 
-Edit your CSV file to have the following columns:
+Each energy management system has its own CSV format. Below is an example of WebCTRL:
+
+### WebCTRL
+
+Columns:
 - Status
 - Boot Version
 - Driver Version
@@ -45,11 +49,11 @@ Edit your CSV file to have the following columns:
 - Vendor Name
 - Local Access Disabled
 - Downloaded by
-- Building
 
-Example CSV content:
+CSV content:
 ```csv
-Status,Boot Version,Driver Version,Location,Full Source,Serial Number,Vendor Name,Local Access Disabled,Downloaded by,Building
-Operational,1.0,2.3.4,Room 101,Source A,123456,VendorX,No,UserA,Building 1
-Out of service,1.2,3.1.4,Room 202,Source B,654321,VendorY,Yes,UserB,Building 2
+Status,Boot Version,Driver Version,Location,Full Source,Serial Number,Vendor Name,Local Access Disabled,Downloaded by
+Operational,1.0,2.3.4,Room 101/Building 1,Source A,123456,VendorX,No,UserA
+Out of service,1.2,3.1.4,Room 202/Building 2,Source B,654321,VendorY,Yes,UserB
 ```
+
