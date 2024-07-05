@@ -62,7 +62,7 @@ Out of service,1.2,3.1.4,Room 202/Building 2,Source B,654321,VendorY,Yes,UserB
 The project includes a script, csv_editor.py, that automatically formats CSV files from WebCTRL, Metasys, Lutron, Wattstopper, and Encelium to be ready for diagramming.
 
 1. Input your CSV file into the script:
-```bash
+```bash python
 csv_file = 'your_file.csv'
 df = pd.read_csv(csv_file)
 ```
