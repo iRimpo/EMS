@@ -74,3 +74,16 @@ webctrl_csv()
 ```bash
 python csv_editor
 ```
+
+## Running the Diagrammer
+1. In main.py, replace the following diagramming functions based on your data. Add/Delete any unneeded functions:
+```bash
+webctrl(your_data, output_file_path, net=net)
+metasys(your_data2, output_file_path, net=net)
+lutron(your_data3, output_file_path, net=net)
+```
+2. Run main.py in the terminal:
+```bash
+python main.py
+```
+The output file Diagram.html will be created in your working directory. Open this file in a web browser to view the EMS network diagram.
