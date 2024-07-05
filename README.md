@@ -70,7 +70,7 @@ df = pd.read_csv(csv_file)
 ```bash
 webctrl_csv()
 ```
-3. Execute the python file
+3. Execute the python file:
 ```bash
 python csv_editor
 ```
