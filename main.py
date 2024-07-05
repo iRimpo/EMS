@@ -17,10 +17,10 @@ initial_height_percent = 70
 initial_width_percent = 70
 
 # Create a Pyvis Network object
-net = Network(height='500px', width='70%', neighborhood_highlight=True, select_menu=True, bgcolor="white", font_color="black", filter_menu=True)
+net = Network(height='500px', width='70%', neighborhood_highlight=True, select_menu=True, bgcolor="white", font_color="black", filter_menu=True, layout=False)
 
 # Call diagrammers to generate network diagrams
-# webctrl(demo, output_file_path, net=net)
+# webctrl(demo, demo_path, net=net)
 webctrl(webctrl_data, output_file_path, net=net)
 metasys(metasys_data, output_file_path, net=net)
 lutron(lutron_data, output_file_path, net=net)
