@@ -2,6 +2,8 @@ import pandas as pd
 from diagrammers import webctrl, metasys, lutron
 from pyvis.network import Network
 
+# pip install Flask Flask-Login Flask-OIDC
+
 # Read the CSV file paths
 webctrl_data = 'webctrl.csv'
 metasys_data = 'metasys.csv'

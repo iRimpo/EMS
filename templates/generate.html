@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Diagram</title>
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+</head>
+<body>
+    <h1>Generate a Diagram</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <h2>WebCTRL</h2>
+        <input type="file" name="webctrl_file" accept=".csv">
+        <br><br>
+
+        <h2>Metasys</h2>
+        <input type="file" name="metasys_file" accept=".csv">
+        <br><br>
+
+        <h2>Lutron</h2>
+        <input type="file" name="lutron_file" accept=".csv">
+        <br><br>
+
+        <button type="submit">Upload and Process</button>
+    </form>
+    <form action="/view">
+        <button type="submit">View Existing Diagram</button>
+    </form>
+</body>
+</html>

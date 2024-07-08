@@ -1,9 +1,7 @@
 import pandas as pd
 import re
 
-def webctrl_csv():
-    csv_file = 'webctrl.csv'
-
+def webctrl_csv(csv_file):
     df = pd.read_csv(csv_file)
 
     # selected location
@@ -36,9 +34,7 @@ def webctrl_csv():
     df.to_csv(csv_file, index=False)
 
 
-def metasys_csv():
-    csv_file = 'metasys.csv'
-
+def metasys_csv(csv_file):
     df = pd.read_csv(csv_file)
 
     # Define a function to extract the building number from the 'Item' column
@@ -49,7 +45,6 @@ def metasys_csv():
             return "FMS"
         else:
             # Extract the first sequence of 2 or more digits from the 'Item' string
-            import re
             match = re.search(r'\b\d{2,}\b', item)
             if match:
                 return match.group(0)
@@ -62,9 +57,7 @@ def metasys_csv():
     # Save the updated DataFrame back to a CSV file
     df.to_csv(csv_file, index=False)
 
-def lutron_csv():
-    csv_file = 'lutron.csv'
-
+def lutron_csv(csv_file):
     df = pd.read_csv(csv_file)
     df_loc = df[['Area Name']]
     df['Building'] = 'Unknown'
@@ -72,13 +65,12 @@ def lutron_csv():
     for index in range(0, len(df_loc)):
         row = df_loc.at[index, 'Area Name']
         bld_num = row[14:16]
-        df.__getitem__('Building').__setitem__(index, bld_num)
+        df.at[index, 'Building'] = bld_num
    
     df['Vendor Name'] = 'Lutron'
 
     # Save the updated DataFrame back to a CSV file
     df.to_csv(csv_file, index=False)
-# Tester
-webctrl_csv()
-#metasys_csv()
-#lutron_csv()
+
+if __name__ == "__main__":
+    print('\n*** Format CSV File ***\n')
