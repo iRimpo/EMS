@@ -6,25 +6,56 @@
     <title>Generate Diagram</title>
     <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
 </head>
+<header style="background-color: #00313C; padding: 10px; text-align: center;">
+    <img src="{{ url_for('static', filename='images/berklab.png') }}" alt="Berkeley Lab" style="width: 7%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+    <h1 style="margin: 10px 0 0 0; color: white;">Generate Diagram</h1>
+</header>
 <body>
-    <h1>Generate a Diagram</h1>
-    <form method="POST" enctype="multipart/form-data">
-        <h2>WebCTRL</h2>
-        <input type="file" name="webctrl_file" accept=".csv">
-        <br><br>
+    <div class="container">
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for category, message in messages %}
+                        <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form method="POST" enctype="multipart/form-data">
+            <h2>WebCTRL</h2>
+            <input type="file" name="webctrl_file" accept=".csv">
+            <br><br>
 
-        <h2>Metasys</h2>
-        <input type="file" name="metasys_file" accept=".csv">
-        <br><br>
+            <h2>Metasys</h2>
+            <input type="file" name="metasys_file" accept=".csv">
+            <br><br>
 
-        <h2>Lutron</h2>
-        <input type="file" name="lutron_file" accept=".csv">
-        <br><br>
+            <h2>Lutron</h2>
+            <input type="file" name="lutron_file" accept=".csv">
+            <br><br>
 
-        <button type="submit">Upload and Process</button>
-    </form>
-    <form action="/view">
-        <button type="submit">View Existing Diagram</button>
-    </form>
+            <h2>Wattstopper</h2>
+            <input type="file" name="wattstopper_file" accept=".csv">
+            <br><br>
+
+            <h2>Encelium</h2>
+            <input type="file" name="encelium_file" accept=".csv">
+            <br><br>
+
+            <h2>iMonnit</h2>
+            <input type="file" name="imonnit_file" accept=".csv">
+            <br><br>
+
+            <button type="submit">Upload and Process</button>
+        </form>
+        {% if files_processed %}
+        <form action="/generate_diagram" method="POST">
+            <button type="submit">Generate Diagram</button>
+        </form>
+        {% endif %}
+        <form action="/view">
+            <button type="submit">View Existing Diagram</button>
+        </form>
+    </div>
 </body>
 </html>

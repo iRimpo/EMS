@@ -6,9 +6,12 @@
     <title>Existing Diagrams</title>
     <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
 </head>
+<header style="background-color: #00313C; padding: 10px; text-align: center;">
+    <img src="images/berklab.png" alt="Berkeley Lab" style="width: 7%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+    <h1 style="margin: 10px 0 0 0; color: white;">Existing Diagrams</h1>
+</header>
 <body>
     <div class="container">
-        <h1>Existing Diagrams</h1>
         <ul>
             {% for file in files %}
                 <li><a href="{{ url_for('view_file', filename=file) }}" target="_blank">{{ file }}</a></li>

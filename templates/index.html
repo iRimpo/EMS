@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Building Automation Systems Diagram</title>
+    <title>LBNL BAS Diagram</title>
     <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
 </head>
-<body>
-    <h1>Building Automation Systems Diagram</h1>
-    <form action="/generate">
-        <button type="submit">Generate a Diagram</button>
-    </form>
-    <form action="/view">
-        <button type="submit">View Existing Diagram</button>
-    </form>
+<header style="background-color: #00313C; padding: 10px; text-align: center;">
+    <img src="images/berklab.png" alt="Berkeley Lab" style="width: 7%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+    <h1 style="margin: 10px 0 0 0; color: white;">Building Automation Systems Diagrammer</h1>
+    <h3 style="margin: 5px 0 10px 0; color: white;">By. Richard Azucenas</h3>
+</header>
+<body style="padding: 10px; text-align: center;">
+        <div class="form-group">
+            <form action="/generate">
+                <button type="submit">Generate Diagram</button>
+            </form>
+            <form action="/view">
+                <button type="submit">View Existing Diagram</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

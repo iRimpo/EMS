@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Diagram</title>
+    <link href="{{ url_for('static', filename='styles/style.css')}}" rel="stylesheet" />
+</head>
+<header style="background-color: #00313C; padding: 10px; text-align: center;">
+    <img src="{{ url_for('static', filename='images/berklab.png') }}" alt="Berkeley Lab" style="width: 7%; height: auto; display: block; margin-left: auto; margin-right: auto;">
+    <h1 style="margin: 10px 0 0 0; color: white;">Network Diagram</h1>
+</header>
+<body>
+    <div class="container">
+        <h2>Network Diagram</h2>
+        <iframe src="{{ url_for('view_file', filename=filename) }}" width="100%" height="600px" frameborder="0"></iframe>
+        <br><br>
+        <form action="/view">
+            <button type="submit">View Existing Diagrams</button>
+        </form>
+        <form action="/">
+            <button type="submit">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>
