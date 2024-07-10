@@ -1,5 +1,5 @@
 import pandas as pd
-from diagrammers import webctrl, metasys, lutron
+from diagrammers import webctrl, metasys, lutron, wattstopper
 from pyvis.network import Network
 
 # pip install Flask Flask-Login Flask-OIDC
@@ -8,6 +8,7 @@ from pyvis.network import Network
 webctrl_data = 'webctrl.csv'
 metasys_data = 'metasys.csv'
 lutron_data = "lutron.csv"
+wattstopper_data = "wattstopper.csv"
 demo = 'demo.csv'
 
 # Output HTML file path
@@ -26,6 +27,7 @@ net = Network(height='500px', width='70%', neighborhood_highlight=True, select_m
 webctrl(webctrl_data, output_file_path, net=net)
 metasys(metasys_data, output_file_path, net=net)
 lutron(lutron_data, output_file_path, net=net)
+wattstopper(wattstopper_data, output_file_path, net=net)
 
 # Set physics options
 # net.show_buttons(filter_=['physics'])

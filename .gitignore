@@ -10,3 +10,4 @@ lutron.csv
 .venv
 .env
 lib/
+wattstopper.csv

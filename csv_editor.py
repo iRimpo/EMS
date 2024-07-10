@@ -72,5 +72,17 @@ def lutron_csv(csv_file):
     # Save the updated DataFrame back to a CSV file
     df.to_csv(csv_file, index=False)
 
+def wattstopper_csv(csv_file):
+    df = pd.read_csv(csv_file)
+    df_loc = df[['No.']]
+    df['Vendor Name'] = 'Wattstopper'
+    df['Building'] = '74'
+
+    df_unique = df.drop_duplicates(subset='Source')
+    
+    df_unique.to_csv(csv_file, index=False)
+
 if __name__ == "__main__":
     print('\n*** Format CSV File ***\n')
+
+wattstopper_csv('wattstopper.csv')
