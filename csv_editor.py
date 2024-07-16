@@ -82,7 +82,26 @@ def wattstopper_csv(csv_file):
     
     df_unique.to_csv(csv_file, index=False)
 
+
+def encelium_csv(csv_file):
+    df = pd.read_csv(csv_file)
+    
+    if 'Item Type' not in df.columns or 'Item' not in df.columns:
+        raise KeyError("Required columns 'Item Type' and 'Item' are not in the CSV file.")
+    
+    # Keep only rows where 'Item Type' is "Basic Zone"
+    df = df[df['Item Type'] == "Basic Zone"]
+    
+    # Extract the building number from the 'Item' column
+    df['Building'] = df['Item'].str[:2]
+    
+    # Set 'Vendor Name' to 'Encelium'
+    df['Vendor Name'] = 'Encelium'
+    
+    # Save the filtered DataFrame back to the CSV file
+    df.to_csv(csv_file, index=False)
+
 if __name__ == "__main__":
     print('\n*** Format CSV File ***\n')
 
-wattstopper_csv('wattstopper.csv')
+encelium_csv('encelium.csv')
