@@ -330,10 +330,10 @@ def wattstopper(csv_file_path, output_file_path, net=None):
             destination = row['Destination']
             protocol = row['Protocol']
             length = row['Length']
-            info = ['Info']
-            hw_destination = ['HW Destination']
-            vendor_name = ['Vendor Name']
-            building = ['Building']
+            info = row['Info']
+            hw_destination = row['HW Destination']
+            vendor_name = row['Vendor Name']
+            building = row['Building']
             
             controller_id = f"{source}_{idx}"
             controller_label = f"{source}"
