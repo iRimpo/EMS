@@ -32,7 +32,7 @@ wattstopper(wattstopper_data, output_file_path, net=net)
 encelium(encelium_data, output_file_path, net=net)
 
 # Set physics options
-# net.show_buttons(filter_=['physics'])
+#net.show_buttons(filter_=['physics'])
 net.set_options("""
 var options = {
   "physics": {
@@ -47,12 +47,15 @@ var options = {
     "solver": "forceAtlas2Based",
     "stabilization": {
       "enabled": true,
-      "iterations": 1000,
-      "updateInterval": 25
+      "iterations": 0,
+      "updateInterval": 300,
+      "onlyDynamicEdges": true,
+      "fit": true
     }
   }
 }
 """)
+
 
 # JavaScript to stop physics after stabilization
 stabilization_js = """
