@@ -1,52 +1,52 @@
 Status,Boot Version,Driver Version,Location,Full Source,Serial Number,Vendor Name,Local Access Disabled,Downloaded by,Building
-Operational,104214,1.2.3,On Campus, ,4215f1f,Automated Logic Corporation,No,Downloaded,02
-Operational,102234,1.2.5,On Campus, ,8765ij9,Johnson Controls,No,Downloaded,06
-Offline,104567,3.1.2,Off Campus, ,8901yz7,Honeywell,No,Not Downloaded,15
-Operational,103456,2.4.5,Off Campus, ,0123cd9,Johnson Controls,No,Downloaded,17
+Operational,104214,1.2.3,On Campus, ,4215f1f,Johnson Controls,No,Downloaded,33
+Operational,102234,1.2.5,On Campus, ,8765ij9,Johnson Controls,No,Downloaded,33
+Offline,104567,3.1.2,Off Campus, ,8901yz7,Honeywell,No,Not Downloaded,76
+Operational,103456,2.4.5,Off Campus, ,0123cd9,Johnson Controls,No,Downloaded,33
 Maintenance,103456,3.2.1,Off Campus, ,6789lm5,Trane,No,Downloaded,23
-Maintenance,107890,1.8.1,On Campus, ,9012op8,Siemens,Yes,Not Downloaded,26
-Operational,105678,2.1.2,Off Campus, ,0123qr9,Johnson Controls,No,Downloaded,27
-Operational,109876,1.7.2,On Campus, ,3456wx2,Honeywell,Yes,Not Downloaded,30
+Maintenance,107890,1.8.1,On Campus, ,9012op8,Johnson Controls,Yes,Not Downloaded,33
+Operational,105678,2.1.2,Off Campus, ,0123qr9,Johnson Controls,No,Downloaded,46A
+Operational,109876,1.7.2,On Campus, ,3456wx2,Johnson Controls,Yes,Not Downloaded,33
 Offline,102345,3.1.1,Off Campus, ,4567yz3,Siemens,No,Downloaded,31
-Operational,105678,1.5.7,Off Campus, ,6789cd5,Trane,No,Downloaded,33
+Operational,105678,1.5.7,Off Campus, ,6789cd5,Johnson Controls,No,Downloaded,33
 Offline,108765,1.8.5,On Campus, ,7890ef6,Schneider Electric,Yes,Not Downloaded,34
 Maintenance,103456,2.1.9,Off Campus, ,8901gh7,Honeywell,No,Downloaded,35
 Operational,109876,1.4.6,On Campus, ,9012ij8,Siemens,Yes,Not Downloaded,36
-Offline,102345,3.2.4,Off Campus, ,0123kl9,Johnson Controls,No,Downloaded,37
-Offline,102345,2.1.6,Off Campus, ,6789wx5,Trane,No,Downloaded,43
+Offline,102345,3.2.4,Off Campus, ,0123kl9,Johnson Controls,No,Downloaded,33
+Offline,102345,2.1.6,Off Campus, ,6789wx5,Trane,No,Downloaded,46A
 Operational,105678,2.2.4,Off Campus, ,8901ab7,Honeywell,No,Downloaded,45
-Offline,108765,1.9.1,On Campus, ,9012cd8,Siemens,Yes,Not Downloaded,46
+Offline,108765,1.9.1,On Campus, ,9012cd8,Johnson Controls,Yes,Not Downloaded,33
 Maintenance,103456,2.3.0,Off Campus, ,0123ef9,Johnson Controls,No,Downloaded,46A
 Operational,109876,1.8.4,On Campus, ,1234gh0,Trane,Yes,Not Downloaded,48
-Maintenance,107890,2.0.7,On Campus, ,3456kl2,Honeywell,Yes,Not Downloaded,50
+Maintenance,107890,2.0.7,On Campus, ,3456kl2,Johnson Controls,Yes,Not Downloaded,33
 Maintenance,103456,3.2.3,Off Campus, ,6789qr5,Trane,No,Downloaded,53
 Offline,102345,2.5.1,Off Campus, ,8901uv7,Honeywell,No,Downloaded,55
-Maintenance,107890,1.4.4,On Campus, ,9012wx8,Siemens,Yes,Not Downloaded,56
+Maintenance,107890,1.4.4,On Campus, ,9012wx8,Johnson Controls,Yes,Not Downloaded,33
 Offline,108765,1.5.8,On Campus, ,1234ab0,Trane,Yes,Not Downloaded,58
-Maintenance,103456,2.4.6,Off Campus, ,2345cd1,Schneider Electric,No,Downloaded,59
-Operational,109876,1.3.3,On Campus, ,3456ef2,Honeywell,Yes,Not Downloaded,60
+Maintenance,103456,2.4.6,Off Campus, ,2345cd1,Johnson Controls,No,Downloaded,33
+Operational,109876,1.3.3,On Campus, ,3456ef2,Johnson Controls,Yes,Not Downloaded,33
 Maintenance,107890,1.8.0,On Campus, ,5678ij4,Johnson Controls,Yes,Not Downloaded,62
-Operational,105678,2.5.3,Off Campus, ,6789kl5,Trane,No,Downloaded,63
-Offline,108765,1.6.1,On Campus, ,7890mn6,Schneider Electric,Yes,Not Downloaded,64
-Maintenance,103456,3.1.7,Off Campus, ,8901op7,Honeywell,No,Downloaded,65
-Operational,109876,1.2.4,On Campus, ,9012qr8,Siemens,Yes,Not Downloaded,66
-Offline,102345,2.6.0,Off Campus, ,0123st9,Johnson Controls,No,Downloaded,67
-Operational,105678,2.1.8,Off Campus, ,2345wx1,Schneider Electric,No,Downloaded,69
-Offline,108765,1.3.2,On Campus, ,3456yz2,Honeywell,Yes,Not Downloaded,70
+Operational,105678,2.5.3,Off Campus, ,6789kl5,Trane,No,Downloaded,76
+Offline,108765,1.6.1,On Campus, ,7890mn6,Schneider Electric,Yes,Not Downloaded,76
+Maintenance,103456,3.1.7,Off Campus, ,8901op7,Honeywell,No,Downloaded,76
+Operational,109876,1.2.4,On Campus, ,9012qr8,Siemens,Yes,Not Downloaded,76
+Offline,102345,2.6.0,Off Campus, ,0123st9,Johnson Controls,No,Downloaded,76
+Operational,105678,2.1.8,Off Campus, ,2345wx1,Johnson Controls,No,Downloaded,33
+Offline,108765,1.3.2,On Campus, ,3456yz2,Honeywell,Yes,Not Downloaded,46A
 Maintenance,103456,2.7.5,Off Campus, ,4567ab3,Siemens,No,Downloaded,71
-Operational,109876,1.4.8,On Campus, ,5678cd4,Johnson Controls,Yes,Not Downloaded,72
-Maintenance,107890,1.5.0,On Campus, ,7890gh6,Schneider Electric,Yes,Not Downloaded,74
-Operational,105678,2.8.4,Off Campus, ,8901ij7,Honeywell,No,Downloaded,75
+Operational,109876,1.4.8,On Campus, ,5678cd4,Johnson Controls,Yes,Not Downloaded,33
+Maintenance,107890,1.5.0,On Campus, ,7890gh6,Schneider Electric,Yes,Not Downloaded,76
+Operational,105678,2.8.4,Off Campus, ,8901ij7,Johnson Controls,No,Downloaded,33
 Offline,108765,1.9.2,On Campus, ,9012kl8,Siemens,Yes,Not Downloaded,76
-Maintenance,103456,2.5.6,Off Campus, ,0123mn9,Johnson Controls,No,Downloaded,77
-Operational,109876,1.7.1,On Campus, ,1234op0,Trane,Yes,Not Downloaded,78
-Maintenance,107890,1.6.4,On Campus, ,3456st2,Honeywell,Yes,Not Downloaded,80
-Operational,105678,2.9.0,Off Campus, ,4567uv3,Siemens,No,Downloaded,81
-Maintenance,103456,2.4.7,Off Campus, ,6789yz5,Trane,No,Downloaded,83
+Maintenance,103456,2.5.6,Off Campus, ,0123mn9,Johnson Controls,No,Downloaded,76
+Operational,109876,1.7.1,On Campus, ,1234op0,Trane,Yes,Not Downloaded,76
+Maintenance,107890,1.6.4,On Campus, ,3456st2,Johnson Controls,Yes,Not Downloaded,33
+Operational,105678,2.9.0,Off Campus, ,4567uv3,Siemens,No,Downloaded,76
+Maintenance,103456,2.4.7,Off Campus, ,6789yz5,Trane,No,Downloaded,46A
 Operational,109876,1.5.6,On Campus, ,7890ab6,Schneider Electric,Yes,Not Downloaded,84
-Offline,102345,2.8.1,Off Campus, ,8901cd7,Honeywell,No,Downloaded,85
-Offline,108765,1.6.2,On Campus, ,1234ij0,Trane,Yes,Not Downloaded,88
-Maintenance,103456,2.6.8,Off Campus, ,2345kl1,Schneider Electric,No,Downloaded,89
-Operational,109876,1.3.7,On Campus, ,3456mn2,Honeywell,Yes,Not Downloaded,90
-Offline,102345,3.0.4,Off Campus, ,4567op3,Siemens,No,Downloaded,91
-Operational,105678,2.7.9,Off Campus, ,2345ef1,Schneider Electric,No,Downloaded,99
+Offline,102345,2.8.1,Off Campus, ,8901cd7,Johnson Controls,No,Downloaded,33
+Offline,108765,1.6.2,On Campus, ,1234ij0,Trane,Yes,Not Downloaded,76
+Maintenance,103456,2.6.8,Off Campus, ,2345kl1,Johnson Controls,No,Downloaded,33
+Operational,109876,1.3.7,On Campus, ,3456mn2,Honeywell,Yes,Not Downloaded,76
+Offline,102345,3.0.4,Off Campus, ,4567op3,Siemens,No,Downloaded,76
+Operational,105678,2.7.9,Off Campus, ,2345ef1,Johnson Controls,No,Downloaded,33

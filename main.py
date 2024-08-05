@@ -56,19 +56,6 @@ var options = {
 }
 """)
 
-
-# JavaScript to stop physics after stabilization
-stabilization_js = """
-<script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
-        var network = window.network;
-        network.once('stabilizationIterationsDone', function() {
-            network.stopSimulation();
-        });
-    });
-</script>
-"""
-
 # Display the network diagram in the HTML file
 net.show(output_file_path, notebook=False)
 
@@ -153,7 +140,7 @@ container_html = '''
 # Insert the header and container HTML at the beginning of the HTML content
 html_content = html_content.replace('<body>', f'<body>\n{header_html}\n{container_html}')
 # Insert the dynamic JavaScript and stabilization JavaScript before the closing body tag
-html_content = html_content.replace('</body>', dynamic_js + stabilization_js + '</body>')
+html_content = html_content.replace('</body>', dynamic_js + '</body>')
 
 # Write the modified content back to the HTML file
 with open(output_file_path, 'w') as file:
