@@ -12,7 +12,6 @@ wattstopper_data = "wattstopper.csv"
 encelium_data = "encelium.csv"
 demo = 'demo.csv'
 
-
 # Output HTML file path
 output_file_path = 'Diagram.html'
 demo_path = "index.html"
